@@ -92,10 +92,11 @@ class LinkedList:
                 new_tail = current_node
                 current_node = current_node._next
             self._tail = new_tail
+            self._length -= 1
 
     # TODO: Implement the __len__ method here
     def __len__(self):
-        pass
+        return self._length
 
     # Phase 2
 
@@ -153,7 +154,8 @@ linked_list.remove_tail()
 print(linked_list.get_node(0))                # None
 
 # # 7. Test returning the list length
-print(len(linked_list))                                 # 2
+# print(len(linked_list))                                 # 2 
+print(len(linked_list))                                 # Error: 2 -> Correct: 0 
 
 # Phase 2 Manual Testing
 
